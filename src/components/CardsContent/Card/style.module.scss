@@ -1,0 +1,121 @@
+.cardContent {
+  display: flex;
+  flex-direction: column;
+
+  .rightContent,
+  .leftContent {
+    display: flex;
+    flex-direction: column-reverse;
+
+    .textContent {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding: 1rem;
+
+      h3 {
+        font-size: 1.5rem;
+        font-weight: 500;
+      }
+
+      p {
+        font-size: 1.125;
+        font-weight: 300;
+        line-height: 2rem;
+      }
+
+      button {
+        border: 1px solid #000;
+        border-radius: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        width: 13.5rem;
+        height: 4rem;
+        background: none;
+        font-weight: 500;
+        font-size: 1rem;
+
+        &:hover {
+          color: var(--blue);
+          border-color: var(--blue);
+        }
+      }
+    }
+  }
+
+  .rightContent {
+    @media (min-width: 1200px) {
+      flex-direction: row;
+
+      .textContent {
+        padding: 0 calc((100vw - 1000px) / 2);
+        justify-content: center;
+        gap: 2rem;
+
+        h3 {
+          font-size: 2.375rem;
+        }
+
+        p {
+          font-size: 1.25rem;
+        }
+      }
+
+      img {
+        width: 50%;
+      }
+    }
+
+    @media (min-width: 1400px) {
+      .textContent {
+        padding: 0 calc((100vw - 1200px) / 2);
+      }
+    }
+
+    @media (min-width: 1600px) {
+      .textContent {
+        padding: 0 calc((100vw - 1500px) / 2);
+      }
+    }
+  }
+
+  .leftContent {
+    @media (min-width: 1200px) {
+      flex-direction: row-reverse;
+
+      .textContent {
+        padding: 0 calc((100vw - 1000px) / 2);
+        justify-content: center;
+        gap: 2rem;
+        align-items: flex-end;
+        text-align: end;
+
+        h3 {
+          font-size: 2.375rem;
+        }
+
+        p {
+          font-size: 1.25rem;
+        }
+      }
+
+      img {
+        width: 50%;
+      }
+    }
+
+    @media (min-width: 1400px) {
+      .textContent {
+        padding: 0 calc((100vw - 1200px) / 2);
+      }
+    }
+
+    @media (min-width: 1600px) {
+      .textContent {
+        padding: 0 calc((100vw - 1500px) / 2);
+      }
+    }
+  }
+}

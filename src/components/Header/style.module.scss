@@ -1,0 +1,107 @@
+.headerContainer {
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  height: 80px;
+  gap: 1.5rem;
+  background: #ffffff99;
+  position: fixed;
+  z-index: 9999;
+  width: 100%;
+
+  @media (min-width: 1200px) {
+    background: #ffffff99;
+    z-index: 9999;
+    padding: 1rem calc((100vw - 1000px) / 2);
+  }
+
+  @media (min-width: 1400px) {
+    background: #ffffff99;
+    z-index: 9999;
+    padding: 1rem calc((100vw - 1200px) / 2);
+  }
+
+  @media (min-width: 1600px) {
+    background: #ffffff99;
+    z-index: 9999;
+    padding: 1rem calc((100vw - 1500px) / 2);
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    button {
+      background: none;
+      border: none;
+      outline: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.25rem;
+      cursor: pointer;
+
+      &:active,
+      &:hover {
+        color: var(--blue);
+      }
+    }
+
+    span {
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    .toogleBtn {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .themesListNav {
+      display: none;
+      align-items: center;
+      justify-content: center;
+
+      @media (min-width: 1600px) {
+        display: flex;
+      }
+
+      nav {
+        ul {
+          display: flex;
+          align-items: center;
+
+          li {
+            a {
+              padding: 1rem;
+
+              &:hover {
+                color: var(--blue);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .sideBtns {
+      display: flex;
+
+      .contactBtn {
+        display: none;
+
+        @media (min-width: 1200px) {
+          display: flex;
+        }
+      }
+
+      button {
+        width: 72px;
+      }
+    }
+  }
+}

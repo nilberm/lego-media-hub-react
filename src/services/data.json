@@ -1,0 +1,133 @@
+[
+  {
+    "id": 1,
+    "title": "Gifting",
+    "subTitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "borderColor": "#EE7500",
+    "content": [
+      {
+        "title": "Toys perfect for birthday gift-giving season in Spring",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas scelerisque nulla vitae mi scelerisque vulputate. Aenean ultrices leo eget lacus maximus, vitae feugiat.",
+        "image": "https://i.imgur.com/ihxsJP4.png"
+      },
+      {
+        "title": "Gifts for Mom",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas scelerisque nulla vitae mi scelerisque vulputate. Aenean ultrices leo eget lacus maximus, vitae feugiat.",
+        "image": "https://i.imgur.com/MgjHjWI.png"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Travel",
+    "subTitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "borderColor": "#00963E",
+
+    "content": [
+      {
+        "title": "Travel the world no matter where you are. No Passport needed.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas scelerisque nulla vitae mi scelerisque vulputate. Aenean ultrices leo eget lacus maximus, vitae feugiat.",
+        "image": "https://i.imgur.com/Mmfbzvz.png"
+      },
+      {
+        "title": "Fun accessories to take with you on your travels or keep kids entertained",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas scelerisque nulla vitae mi scelerisque vulputate. Aenean ultrices leo eget lacus maximus, vitae feugiat.",
+        "image": "https://i.imgur.com/9THLT5h.png"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Adults welcome",
+    "subTitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "borderColor": "#006CB7",
+
+    "content": [
+      {
+        "title": "For the Kids at Heart who love to unplug, unbox and unwind",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas scelerisque nulla vitae mi scelerisque vulputate. Aenean ultrices leo eget lacus maximus, vitae feugiat.",
+        "image": "https://i.imgur.com/eHWKJKf.png"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Art & Home Décor",
+    "subTitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "borderColor": "#E0E0E0",
+
+    "content": [
+      {
+        "title": "Playful ideas for refreshing your space while tapping into your more creative side",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas scelerisque nulla vitae mi scelerisque vulputate. Aenean ultrices leo eget lacus maximus, vitae feugiat.",
+        "image": "https://i.imgur.com/kr0jEEs.png"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Space",
+    "subTitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "borderColor": "#000000",
+
+    "content": [
+      {
+        "title": "Capture the wonders of space and exploration",
+        "description": "In the last 30 years, nothing has taken us deeper into space – or better shaped the way we see the universe – than the Hubble Space Telescope.",
+        "image": "https://i.imgur.com/MpBc5oL.png"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Pop Culture",
+    "subTitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "borderColor": "#FC36A5",
+
+    "content": [
+      {
+        "title": "Recreate scenes from your favorite movies and TV series",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas scelerisque nulla vitae mi scelerisque vulputate. Aenean ultrices leo eget lacus maximus, vitae feugiat.",
+        "image": "https://i.imgur.com/glZa7cZ.png"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Toddlers",
+    "subTitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "borderColor": "#FFD500",
+
+    "content": [
+      {
+        "title": "Waterproof toys for toddlers and beyond",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas scelerisque nulla vitae mi scelerisque vulputate. Aenean ultrices leo eget lacus maximus, vitae feugiat.",
+        "image": "https://i.imgur.com/BrBgk0Y.png"
+      },
+      {
+        "title": "xx TBD",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas scelerisque nulla vitae mi scelerisque vulputate. Aenean ultrices leo eget lacus maximus, vitae feugiat.",
+        "image": "https://i.imgur.com/tK9VHwj.png"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Real World Role Playing",
+    "subTitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "borderColor": "#E3000B",
+
+    "content": [
+      {
+        "title": "Celebrating the everyday heroes",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas scelerisque nulla vitae mi scelerisque vulputate. Aenean ultrices leo eget lacus maximus, vitae feugiat.",
+        "image": "https://i.imgur.com/HFMgTce.png"
+      },
+      {
+        "title": "xxxxx TBD",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas scelerisque nulla vitae mi scelerisque vulputate. Aenean ultrices leo eget lacus maximus, vitae feugiat.",
+        "image": "https://i.imgur.com/AbGoMcS.png"
+      }
+    ]
+  }
+]

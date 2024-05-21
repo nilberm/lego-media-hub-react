@@ -1,0 +1,38 @@
+:root {
+  --text-2: #525252;
+  --xlight: #bbdcf5;
+  --blue: #006cb7;
+  --font-family: 'Roboto', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-family);
+}
+
+html,
+body {
+  max-width: 100vw;
+  min-width: 320px;
+  overflow-x: hidden;
+  font-family: var(--font-family);
+}
+
+button {
+  outline: none;
+  cursor: pointer;
+  font-family: var(--font-family);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  font-family: var(--font-family);
+}
+
+ul {
+  list-style: none;
+  font-family: var(--font-family);
+}
