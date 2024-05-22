@@ -37,9 +37,17 @@
         font-weight: 500;
         font-size: 1rem;
 
+        svg {
+          transition: all 0.2s ease-out;
+        }
+
         &:hover {
           color: var(--blue);
           border-color: var(--blue);
+
+          svg {
+            transform: translateX(3px);
+          }
         }
       }
     }
