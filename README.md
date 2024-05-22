@@ -1,30 +1,45 @@
-# React + TypeScript + Vite
+# Lego Media Hub
+Lego Media Hub is a React-based media application done for a job test.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Preview
+You can see the online version of this project at this link: https://lego-media-hub.netlify.app/
 
-Currently, two official plugins are available:
+## Getting Started
+To get started with Lego Media Hub, follow these simple steps:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Prerequisites
+Please make sure you have Node.js and npm (or yarn) installed on your local machine.
 
-## Expanding the ESLint configuration
+Node.js (version >= 14.0.0)
+npm (version >= 6.0.0) or yarn (version >= 1.0.0)
+### Installation
+1. Clone the repository to your local machine:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-- Configure the top-level `parserOptions` property like this:
+```git clone https://github.com/nilberm/lego-media-hub-react.git```
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+2. Navigate to the project directory:
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+```cd lego-media-hub-react```
+
+3. Install dependencies using npm:
+
+```npm install```
+
+or using yarn:
+
+```yarn```
+
+### Running the Application
+Once you have installed the dependencies, you can run the application locally.
+
+```npm run dev```
+
+or
+
+```yarn dev```
+
+This will start the development server using Vite, and you can access the application in your browser at http://localhost:5173.
+
+License
+This project is licensed under the MIT License.
