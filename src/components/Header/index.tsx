@@ -1,13 +1,13 @@
 import style from "./style.module.scss";
-import logoImg from "../../assets/imgs/logo/brand-logo.png";
+import { ThemeList } from "./ThemeList";
 import { IconMenu } from "../Icons/IconMenu";
 import { IconSearch } from "../Icons/IconSearch";
 import { IconRequest } from "../Icons/IconRequest";
 import { IconCLose } from "../Icons/IconClose";
 import { IconMessage } from "../Icons/IconMessage";
 import { IconMenuHover } from "../Icons/IconMenuHover";
-import { ThemeList } from "./ThemeList";
 import useHeaderControl from "../../hooks/useHeaderControl";
+import logoImg from "../../assets/imgs/logo/brand-logo.png";
 
 export default function Header() {
   const {

@@ -1,11 +1,11 @@
 import style from "./style.module.scss";
-import logoImg from "../../assets/imgs/logo/brand-logo.png";
 import { IconCLose } from "../Icons/IconClose";
 import { IconHome } from "../Icons/IconHome";
 import { IconRequest } from "../Icons/IconRequest";
 import { IconMessage } from "../Icons/IconMessage";
 import { ThemeList } from "../Header/ThemeList";
 import { BrandsList } from "../Header/BrandsList";
+import logoImg from "../../assets/imgs/logo/brand-logo.png";
 import useMenuControl from "../../hooks/useMenuControl";
 
 export default function MenuOpen() {

@@ -1,6 +1,6 @@
+import Card from "./Card";
 import style from "./style.module.scss";
 import data from "../../services/data.json";
-import Card from "./Card";
 import { CardContentProps, CardJsonProps } from "../../interface/CardJsonProps";
 export default function CardsContent() {
   return (

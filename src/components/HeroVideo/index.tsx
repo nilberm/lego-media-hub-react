@@ -1,13 +1,11 @@
-"use client";
-
 import { useState } from "react";
+import style from "./style.module.scss";
 import { IconDownloadVideo } from "../Icons/IconDownloadVideo";
 import { IconVolumeMuted } from "../Icons/IconVolumeMuted";
-import style from "./style.module.scss";
-import video from "../../assets/videos/background-desktop.mp4";
-import { IconVolume } from "../Icons/IconVolume";
-import useDownload from "../../hooks/useDownload";
 import { IconDown } from "../Icons/IconDown";
+import { IconVolume } from "../Icons/IconVolume";
+import video from "../../assets/videos/background-desktop.mp4";
+import useDownload from "../../hooks/useDownload";
 
 export default function HeroVideo() {
   const [muted, setMuted] = useState(true);

@@ -1,7 +1,7 @@
+import style from "./style.module.scss";
 import { useCardClassName } from "../../../hooks/useCardClassName";
 import { CardContentProps } from "../../../interface/CardJsonProps";
 import { IconArrow } from "../../Icons/IconArrow";
-import style from "./style.module.scss";
 
 interface CardProps {
   item: CardContentProps;
