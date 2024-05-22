@@ -15,15 +15,21 @@ export default function HeroVideo() {
   const download = useDownload();
 
   return (
-    <section className={style.sectionComponent}>
+    <section className={style.sectionComponent} aria-labelledby="hero-heading">
       <div className={style.videoContainer}>
-        <video className={style.videoBackground} autoPlay muted={muted} loop>
+        <video
+          className={style.videoBackground}
+          autoPlay
+          muted={muted}
+          loop
+          aria-hidden="true"
+        >
           <source src={video} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
 
         <div className={style.buttonsVideo}>
-          <h1 className={style.h1Desktop}>
+          <h1 className={style.h1Desktop} id="hero-heading">
             Welcome to the Play Matters Interactive Lookbook
           </h1>
 
@@ -32,6 +38,7 @@ export default function HeroVideo() {
               type="button"
               className={style.volumeBtn}
               onClick={() => setMuted(!muted)}
+              aria-label={muted ? "Unmute video" : "Mute video"}
             >
               {muted ? <IconVolumeMuted /> : <IconVolume />}
             </button>
@@ -39,6 +46,7 @@ export default function HeroVideo() {
               type="button"
               className={style.downloadBtn}
               onClick={() => download(video, "lego-video.mp4")}
+              aria-label="Download video"
             >
               <IconDownloadVideo />
             </button>
@@ -46,7 +54,7 @@ export default function HeroVideo() {
         </div>
 
         <div className={style.scrollDownBtn}>
-          <a href="#content">
+          <a href="#content" aria-label="Scroll down to content">
             Scroll down <IconDown />
           </a>
         </div>

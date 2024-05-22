@@ -8,6 +8,7 @@
   position: fixed;
   z-index: 9999;
   width: 100%;
+  backdrop-filter: blur(3px);
 
   @media (min-width: 1200px) {
     background: #ffffff99;

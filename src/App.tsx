@@ -1,19 +1,21 @@
-import { useState } from "react";
+
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Home from "./pages/Home";
 import MenuOpen from "./components/MenuOpen";
+import { useContext } from "react";
+import { ControlMenuContext } from "./context/toggleMenuContext";
 
 function App() {
-  const [toogleMenu, setToogleMenu] = useState(false);
+  const {isMenuOpen} = useContext(ControlMenuContext)
   return (
     <>
-      <MenuOpen toggleMenu={toogleMenu} setToggleMenu={setToogleMenu} />
-      {toogleMenu ? (
+      <MenuOpen />
+      {isMenuOpen ? (
         ""
       ) : (
         <>
-          <Header toggleMenu={toogleMenu} setToggleMenu={setToogleMenu} />
+          <Header />
           <Home />
           <Footer />
         </>

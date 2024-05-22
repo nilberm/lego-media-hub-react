@@ -1,8 +1,9 @@
 :root {
   --text-2: #525252;
+  --text-3: #80808020;
   --xlight: #bbdcf5;
   --blue: #006cb7;
-  --font-family: 'Roboto', sans-serif;
+  --font-family: "Roboto", sans-serif;
 }
 
 * {
@@ -18,6 +19,7 @@ body {
   min-width: 320px;
   overflow-x: hidden;
   font-family: var(--font-family);
+  scroll-behavior: smooth;
 }
 
 button {

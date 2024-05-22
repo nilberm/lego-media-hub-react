@@ -1,3 +1,4 @@
+import { useCardClassName } from "../../../hooks/useCardClassName";
 import { CardContentProps } from "../../../interface/CardJsonProps";
 import { IconArrow } from "../../Icons/IconArrow";
 import style from "./style.module.scss";
@@ -9,30 +10,21 @@ interface CardProps {
   isSingleCard: boolean;
 }
 export default function Card({ item, index, isLeft, isSingleCard }: CardProps) {
+  const contentClassName = useCardClassName({ index, isLeft, isSingleCard });
+
   return (
     <div className={style.cardContent}>
-      <div
-        className={`${
-          !isSingleCard && index % 2 === 0
-            ? style.rightContent
-            : !isSingleCard && index % 2 !== 0
-            ? style.leftContent
-            : isSingleCard && !isLeft
-            ? style.leftContent
-            : style.rightContent
-        }`}
-        
-      >
+      <div className={contentClassName}>
         <div className={style.textContent}>
           <h3>{item.title}</h3>
           <p>{item.description}</p>
 
           <button type="button">
             <a href="/">View details</a>
-            <IconArrow />
+            <IconArrow aria-hidden="true" />
           </button>
         </div>
-        <img src={item.image} alt="lego" />
+        <img src={item.image} alt={item.title} />
       </div>
     </div>
   );

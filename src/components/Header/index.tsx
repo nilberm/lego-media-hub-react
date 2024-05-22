@@ -3,71 +3,80 @@ import logoImg from "../../assets/imgs/logo/brand-logo.png";
 import { IconMenu } from "../Icons/IconMenu";
 import { IconSearch } from "../Icons/IconSearch";
 import { IconRequest } from "../Icons/IconRequest";
-import { useState } from "react";
 import { IconCLose } from "../Icons/IconClose";
-
 import { IconMessage } from "../Icons/IconMessage";
-
 import { IconMenuHover } from "../Icons/IconMenuHover";
 import { ThemeList } from "./ThemeList";
+import useHeaderControl from "../../hooks/useHeaderControl";
 
-interface HeaderProps {
-  toggleMenu: boolean;
-  setToggleMenu: (value: boolean) => void;
-}
-export default function Header({toggleMenu, setToggleMenu}: HeaderProps) {
-  const [isHoveredMenu, setIsHoveredMenu] = useState(false);
+export default function Header() {
+  const {
+    isHoveredMenu,
+    isMenuOpen,
+    toggleMenu,
+    handleMouseEnter,
+    handleMouseLeave,
+  } = useHeaderControl();
 
   return (
-    <>
-      <header className={style.headerContainer}>
-        <div className={style.logo}>
-          <img src={logoImg} alt="brand logo" />
+    <header className={style.headerContainer}>
+      <div className={style.logo}>
+        <a href="/" aria-label="Home">
+          <img src={logoImg} alt="Brand logo" />
+        </a>
+      </div>
+
+      <div className={style.buttons}>
+        <div className={style.toogleBtn}>
+          {!isMenuOpen ? (
+            <button
+              type="button"
+              onClick={toggleMenu}
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+              aria-label="Open categories menu"
+              aria-expanded={isMenuOpen}
+            >
+              {isHoveredMenu ? <IconMenuHover /> : <IconMenu />}
+              <span>Categories</span>
+            </button>
+          ) : (
+            <button
+              type="button"
+              onClick={toggleMenu}
+              aria-label="Close categories menu"
+              aria-expanded={isMenuOpen}
+            >
+              <IconCLose />
+            </button>
+          )}
         </div>
 
-        <div className={style.buttons}>
-          <div className={style.toogleBtn}>
-            {!toggleMenu ? (
-              <button
-                type="button"
-                onClick={() => setToggleMenu(!toggleMenu)}
-                onMouseEnter={() => setIsHoveredMenu(true)}
-                onMouseLeave={() => setIsHoveredMenu(false)}
-              >
-                {isHoveredMenu ? <IconMenuHover /> : <IconMenu />}
-                <span>Categories</span>
-              </button>
-            ) : (
-              <button type="button" onClick={() => setToggleMenu(!toggleMenu)}>
-                <IconCLose />
-              </button>
-            )}
-          </div>
-
-          <div className={style.themesListNav}>
-            <nav>
-              <ThemeList />
-            </nav>
-          </div>
-
-          <div className={style.sideBtns}>
-            <button type="button" className={style.contactBtn}>
-              <IconMessage />
-              <span>Contact us</span>
-            </button>
-            <button type="button">
-              <IconSearch />
-              <span>Search</span>
-            </button>
-
-            <button type="button">
-              <IconRequest />
-              <span>Request</span>
-            </button>
-          </div>
+        <div className={style.themesListNav}>
+          <nav aria-label="Themes">
+            <ThemeList />
+          </nav>
         </div>
-      </header>
 
-    </>
+        <div className={style.sideBtns}>
+          <button
+            type="button"
+            className={style.contactBtn}
+            aria-label="Contact us"
+          >
+            <IconMessage />
+            <span>Contact us</span>
+          </button>
+          <button type="button" aria-label="Search">
+            <IconSearch />
+            <span>Search</span>
+          </button>
+          <button type="button" aria-label="Request">
+            <IconRequest />
+            <span>Request</span>
+          </button>
+        </div>
+      </div>
+    </header>
   );
 }

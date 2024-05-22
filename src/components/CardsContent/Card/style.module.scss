@@ -50,7 +50,7 @@
       flex-direction: row;
 
       .textContent {
-        padding: 0 calc((100vw - 1000px) / 2);
+        padding: 2rem calc((100vw - 1000px) / 2);
         justify-content: center;
         gap: 2rem;
 
@@ -65,12 +65,13 @@
 
       img {
         width: 50%;
+        object-fit: cover;
       }
     }
 
     @media (min-width: 1400px) {
       .textContent {
-        padding: 0 calc((100vw - 1200px) / 2);
+        padding: 2rem calc((100vw - 1200px) / 2);
       }
     }
 

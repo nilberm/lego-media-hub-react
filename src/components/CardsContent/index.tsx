@@ -7,28 +7,34 @@ export default function CardsContent() {
     <section className={style.sectionContainer} id="content">
       {data.map((item: CardJsonProps, indexItem: number) => {
         return (
-          <div className={style.cardContent} key={`${item.id}${indexItem}`}>
-            <div
+          <article
+            className={style.cardContent}
+            key={`${item.id}${indexItem}`}
+            id={`${item.id}`}
+            aria-labelledby={`heading-${item.id}`}
+          >
+            <header
               className={style.cardHeader}
               style={{
                 borderColor: item.borderColor,
               }}
             >
-              <h4>{item.title}</h4>
+              <h4 id={`heading-${item.id}`}>{item.title}</h4>
               <span
                 className={style.divider}
                 style={{
                   borderColor: item.borderColor,
                 }}
+                aria-hidden="true"
               ></span>
               <p>{item.subTitle}</p>
-            </div>
+            </header>
 
             <div className={style.cards}>
               {item.content.map((content: CardContentProps, index: number) => {
                 return (
                   <Card
-                  key={`${index}`}
+                    key={`${index}`}
                     item={content}
                     index={index}
                     isLeft={indexItem % 2 === 0}
@@ -42,8 +48,9 @@ export default function CardsContent() {
               style={{
                 borderColor: item.borderColor,
               }}
+              aria-hidden="true"
             ></span>
-          </div>
+          </article>
         );
       })}
     </section>

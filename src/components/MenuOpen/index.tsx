@@ -6,27 +6,35 @@ import { IconRequest } from "../Icons/IconRequest";
 import { IconMessage } from "../Icons/IconMessage";
 import { ThemeList } from "../Header/ThemeList";
 import { BrandsList } from "../Header/BrandsList";
+import useMenuControl from "../../hooks/useMenuControl";
 
-interface MenuOpenProps {
-  toggleMenu: boolean;
-  setToggleMenu: (value: boolean) => void;
-}
-export default function MenuOpen({ setToggleMenu, toggleMenu }: MenuOpenProps) {
+export default function MenuOpen() {
+  const { isClosing, isMenuOpen, closeMenu } = useMenuControl();
+
   return (
     <nav
       className={`${style.navagationContainer} ${
-        toggleMenu ? style.menuOpen : ""
+        isClosing ? style.menuClose : isMenuOpen ? style.menuOpen : ""
       }`}
+      aria-hidden={!isMenuOpen}
+      aria-label="Main menu"
     >
       <div className={style.columnsDesktop}>
         <div className={style.column}>
           <div className={style.logoAndBtn}>
             <div className={style.logo}>
-              <img src={logoImg} alt="brand logo" />
+              <a href="/" aria-label="Home">
+                <img src={logoImg} alt="Brand logo" />
+              </a>
             </div>
 
             <div className={style.toogleBtn}>
-              <button type="button" onClick={() => setToggleMenu(!toggleMenu)}>
+              <button
+                type="button"
+                onClick={() => closeMenu()}
+                aria-label="Close menu"
+                aria-expanded={isMenuOpen}
+              >
                 <IconCLose />
               </button>
             </div>
@@ -34,19 +42,19 @@ export default function MenuOpen({ setToggleMenu, toggleMenu }: MenuOpenProps) {
           <div className={style.mainPages}>
             <ul>
               <li>
-                <a href="/">
+                <a href="/" aria-label="Home page">
                   <IconHome />
                   Home
                 </a>
               </li>
               <li>
-                <a href="/">
+                <a href="/" aria-label="Requests page">
                   <IconRequest />
                   Requests
                 </a>
               </li>
               <li>
-                <a href="/">
+                <a href="/" aria-label="Contact us page">
                   <IconMessage />
                   Contact Us
                 </a>
